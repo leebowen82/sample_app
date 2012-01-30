@@ -30,13 +30,13 @@ describe PagesController do
     it "should have the right title" do
 			get'contact'
 			response.should have_selector("title", :content => "Ruby on Rails Tutorial Sample App | Contact")
-			
+		end
+		
 		it "should have a non-blank body" do
 			get 'contact'
 			response.body.should_not =~ /<body>\s*<\/body>/
 		end
 		
-		end
   end
 
   describe "GET 'about'" do
